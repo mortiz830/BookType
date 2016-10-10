@@ -1,15 +1,17 @@
 #include "BookType.h"
 
 void bookType::setBookInfo(string title, string ISBN, string Publisher, int PublishYear,
-	string auth[4], double cost, int copies,
-	int noAuthors)
+	string auth[4], double cost, double quantity, int noAuthors)
 {
 	bookTitle = title;
 	bookISBN = ISBN;
 	bookPublisher = Publisher;
 	bookPublishYear = PublishYear;
-	authors[4] = auth[4];
-	price = cost;
+	for (int i = 0; i < noAuthors; i++)
+	{
+		authors[i] = auth[i];
+	}
+	price = cost;	
 	quantity = copies;
 	noOfAuthors = noAuthors;
 }
@@ -20,8 +22,7 @@ void bookType::setBookTitle(string s)
 }
 void bookType::setBookISBN(string s)
 {
-	bookISBN = s;
-}
+	bookISBN = s;}
 
 void bookType::setBookPrice(double cost)
 {
