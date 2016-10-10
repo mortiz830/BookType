@@ -1,7 +1,6 @@
 #include "BookType.h"
 
-void bookType::setBookInfo(string title, string ISBN, string Publisher, int PublishYear,
-	string auth[4], double cost, double quantity, int noAuthors)
+void bookType::setBookInfo(string title, string ISBN, string Publisher, int PublishYear, string auth[4], double cost, double quantity, int noAuthors)
 {
 	bookTitle = title;
 	bookISBN = ISBN;
@@ -11,8 +10,8 @@ void bookType::setBookInfo(string title, string ISBN, string Publisher, int Publ
 	{
 		authors[i] = auth[i];
 	}
-	price = cost;	
-	quantity = copies;
+	price = cost;
+	//quantity = copies;
 	noOfAuthors = noAuthors;
 }
 
@@ -22,7 +21,8 @@ void bookType::setBookTitle(string s)
 }
 void bookType::setBookISBN(string s)
 {
-	bookISBN = s;}
+	bookISBN = s;
+}
 
 void bookType::setBookPrice(double cost)
 {
@@ -76,16 +76,18 @@ bool bookType::isAuthor(string s) const
 		else
 			return false;
 	}
+
+	return false; // just to compile
 }
 
 void bookType::getBookTitle(string& s) const
 {
-	
+
 }
 
 void bookType::getBookISBN(string& s) const
 {
-	
+
 }
 
 double bookType::getBookPrice() const
@@ -141,12 +143,10 @@ void bookType::updateQuantity(int addBooks)
 
 bookType::bookType()
 {
-	
+
 }
 
-bookType::bookType(string title, string ISBN, string Publisher, int PublishYear,
-	string auth[4], double cost, int copies,
-	int noAuthors)
+bookType::bookType(string title, string ISBN, string Publisher, int PublishYear, string auth[4], double cost, int copies, int noAuthors)
 {
 	setBookInfo(title, ISBN, Publisher, PublishYear, auth, cost, copies, noAuthors);
 }
