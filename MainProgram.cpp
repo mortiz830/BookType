@@ -9,7 +9,7 @@ int main()
 
 	header();
 	getBookData(myBook, numberOfBooks);
-	//printBookData(myBook, numberOfBooks);
+	printBookData(myBook, numberOfBooks);
 
 	system("pause");
 

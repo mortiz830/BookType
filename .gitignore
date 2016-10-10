@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+
+*.tlog
+*.pdb
+*.log
+*.idb
+*vcxproj*
+*.ilk
+*.opendb
+*.db
